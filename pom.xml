@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.bj58.spat</groupId>
+    <artifactId>argo-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>core</module>
+        <module>samples/hello-world</module>
+        <module>samples/company</module>
+    </modules>
+
+    <name>58.com argo</name>
+    <description>58.com argo</description>
+    <url>https://github.com/58code/Argo</url>
+
+    <organization>
+        <name>58.com</name>
+        <url>http://www.58.com/</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>SPAT</id>
+            <name>Service Platform Architecture Team</name>
+            <url>https://github.com/58code</url>
+            <email>spat@58.com</email>
+        </developer>
+
+        <developer>
+            <id>renjun</id>
+            <name>renjun</name>
+            <url>http://weibo.com/duoway</url>
+            <email>rjun@outlook.com</email>
+        </developer>
+
+        <developer>
+            <id>liuzw</id>
+            <name> liu zhongwei</name>
+            <email>liuzw@58.com</email>
+        </developer>
+    </developers>
+
+</project>
