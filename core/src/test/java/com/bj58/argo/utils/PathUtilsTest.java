@@ -53,7 +53,7 @@ public class PathUtilsTest {
     public void testSimplyWithoutPrefix() {
         String url = "/";
         Assert.assertEquals(PathUtils.simplyWithoutPrefix(url), "");
-        Assert.assertEquals(PathUtils.simplyWithoutSuffix(url), "");
+        Assert.assertEquals(PathUtils.simplyWithoutSuffix(url), "/");
 
         url = "/opt";
         Assert.assertEquals(PathUtils.simplyWithoutPrefix(url), "opt");

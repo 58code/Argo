@@ -41,7 +41,20 @@ Argo不是一个通用的web框架，一个问题解决方案可能有很多，�
 
 ## Hello World
 
-请参考例子 hello-world
+请参考例子 samples/hello-world
+
+```shell
+mvn tomcat7:run
+```
+
+或者
+```shell
+mvn jetty:run
+```
+
+然后浏览
+
+http://localhost/
 
 ## 进阶
 

@@ -105,7 +105,7 @@ public class PathUtils {
      */
     public static String simplyWithoutSuffix(String url) {
         StringBuilder simply = simplyStringBuilder(url);
-        if (simply.length() > 0 && '/' == simply.charAt(simply.length() - 1))
+        if (simply.length() > 1 && '/' == simply.charAt(simply.length() - 1))
         	simply.deleteCharAt(simply.length() - 1);
 
         return simply.toString();
