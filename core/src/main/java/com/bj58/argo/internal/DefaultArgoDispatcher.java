@@ -78,6 +78,8 @@ public class DefaultArgoDispatcher implements ArgoDispatcher {
         localContext.set(context);
 
         BeatContext beat = argo.injector().getInstance(defaultBeatContextKey);
+        // 增加默认参数到model
+        beat.getModel().add("__beat", beat);
         context.setBeat(beat);
         return beat;
     }

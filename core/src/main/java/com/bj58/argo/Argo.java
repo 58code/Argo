@@ -226,13 +226,8 @@ public class Argo {
 
     private File innerCurrentFolder() {
 
-        try {
-            ClassLoader cl = Thread.currentThread().getContextClassLoader();
-            URL url = cl.getResource(".");
-            return new File(url.toURI());
-        } catch (URISyntaxException e) {
-            throw ArgoException.raise(e);
-        }
+//        System.out.println("Current Folder: " + getClass().getResource("/").getFile());
+        return new File(getClass().getResource("/").getFile());
     }
 
 }

@@ -16,7 +16,7 @@ public class HomeController extends AbstractController {
 
     @Path("")
     public ActionResult home() {
-        System.out.println(1);
+//        System.out.println(1);
         return view("index"); // velocity模板是 /src/main/java/resources/views/index.html
     }
 
