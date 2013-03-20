@@ -60,6 +60,23 @@ TODO
 
 TODO
 
+## 更新日志
+### 2013-03-21
+1. 修正 issues #1, #2,
+1. 修正 ContextPath不是根目录("/")下无法正常运行的bug
+1. 提供model中默认参数 __beat,便于在view中使用
+1. 提供war:war打包plugin实例，移除web.xml的依赖
+```xml
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+```
+
 [58同城]: http://www.58.com/
 [约定优于配置]: http://zh.wikipedia.org/wiki/%E7%BA%A6%E5%AE%9A%E4%BC%98%E4%BA%8E%E9%85%8D%E7%BD%AE
 [guice]: http://code.google.com/p/google-guice/
