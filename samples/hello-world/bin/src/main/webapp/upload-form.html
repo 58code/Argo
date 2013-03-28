@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+
+<form method="post" enctype="multipart/form-data" action="post-upload.html?company=58.com&address=beijing">
+    <ul>
+        <li>name: <input type="text" name="name"/></li>
+        <li>phone: <input type="text" name="phone"/></li>
+        <li>file:<input type="file" name="file"></li>
+    </ul>
+
+    <input type="submit" name="submit" value="提交"/>
+
+</form>
+
+<p>
+
+    这是一个表单提交页面<br/>
+    <i>action="post-upload.html?company=58.com&address=beijing" </i><br/>
+    我们希望在post-upload.html(对应的Action是HomeController.postUpload())中能区分queryString和form的数据。
+
+
+
+</body>
+</html>
