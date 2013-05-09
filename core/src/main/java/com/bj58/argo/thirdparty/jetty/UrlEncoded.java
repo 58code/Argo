@@ -190,67 +190,68 @@ public class UrlEncoded extends MultiMap<String> implements Cloneable
     {
         if (charset==null)
             charset=ENCODING;
-
-        synchronized(map)
-        {
-            String key = null;
-            String value = null;
-            int mark=-1;
-            boolean encoded=false;
-            for (int i=0;i<content.length();i++)
+        if (content != null) {
+            synchronized(map)
             {
-                char c = content.charAt(i);
-                switch (c)
+                String key = null;
+                String value = null;
+                int mark=-1;
+                boolean encoded=false;
+                for (int i=0;i<content.length();i++)
                 {
-                  case '&':
-                      int l=i-mark-1;
-                      value = l==0?"":
-                          (encoded?decodeString(content,mark+1,l,charset):content.substring(mark+1,i));
-                      mark=i;
-                      encoded=false;
-                      if (key != null)
-                      {
-                          map.add(key,value);
-                      }
-                      else if (value!=null&&value.length()>0)
-                      {
-                          map.add(value,"");
-                      }
-                      key = null;
-                      value=null;
-                      if (maxKeys>0 && map.size()>maxKeys)
-                          throw new IllegalStateException("Form too many keys");
-                      break;
-                  case '=':
-                      if (key!=null)
+                    char c = content.charAt(i);
+                    switch (c)
+                    {
+                      case '&':
+                          int l=i-mark-1;
+                          value = l==0?"":
+                              (encoded?decodeString(content,mark+1,l,charset):content.substring(mark+1,i));
+                          mark=i;
+                          encoded=false;
+                          if (key != null)
+                          {
+                              map.add(key,value);
+                          }
+                          else if (value!=null&&value.length()>0)
+                          {
+                              map.add(value,"");
+                          }
+                          key = null;
+                          value=null;
+                          if (maxKeys>0 && map.size()>maxKeys)
+                              throw new IllegalStateException("Form too many keys");
                           break;
-                      key = encoded?decodeString(content,mark+1,i-mark-1,charset):content.substring(mark+1,i);
-                      mark=i;
-                      encoded=false;
-                      break;
-                  case '+':
-                      encoded=true;
-                      break;
-                  case '%':
-                      encoded=true;
-                      break;
-                }                
-            }
-            
-            if (key != null)
-            {
-                int l=content.length()-mark-1;
-                value = l==0?"":(encoded?decodeString(content,mark+1,l,charset):content.substring(mark+1));
-                map.add(key,value);
-            }
-            else if (mark<content.length())
-            {
-                key = encoded
-                    ?decodeString(content,mark+1,content.length()-mark-1,charset)
-                    :content.substring(mark+1);
-                if (key != null && key.length() > 0)
+                      case '=':
+                          if (key!=null)
+                              break;
+                          key = encoded?decodeString(content,mark+1,i-mark-1,charset):content.substring(mark+1,i);
+                          mark=i;
+                          encoded=false;
+                          break;
+                      case '+':
+                          encoded=true;
+                          break;
+                      case '%':
+                          encoded=true;
+                          break;
+                    }                
+                }
+                
+                if (key != null)
                 {
-                    map.add(key,"");
+                    int l=content.length()-mark-1;
+                    value = l==0?"":(encoded?decodeString(content,mark+1,l,charset):content.substring(mark+1));
+                    map.add(key,value);
+                }
+                else if (mark<content.length())
+                {
+                    key = encoded
+                        ?decodeString(content,mark+1,content.length()-mark-1,charset)
+                        :content.substring(mark+1);
+                    if (key != null && key.length() > 0)
+                    {
+                        map.add(key,"");
+                    }
                 }
             }
         }
