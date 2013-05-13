@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.061" errors="0" skipped="0" tests="19" name="TestSuite">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_31\jre\bin"/>
+    <property name="java.vm.version" value="20.6-b01"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\work\workspace\GitHub\Argo\core"/>
+    <property name="java.runtime.version" value="1.6.0_31-b05"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_31\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\liuzw\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="D:\work\workspace\argo\.metadata\.plugins\org.eclipse.m2e.core\launches\m2conf8088328570362278026.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_31\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python27\;C:\Python27\Scripts;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_31\bin;C:\Users\liuzw\AppData\Roaming\Python\Scripts;C:\Program Files (x86)\OpenVPN\bin;C:\Program Files\Java\jdk1.6.0_31\bin;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\liuzw"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="user.name" value="liuzw"/>
+    <property name="java.class.path" value="/D:/work/eclipse-java-juno-SR1-win32-x86_64/eclipse/configuration/org.eclipse.osgi/bundles/237/1/.cp/jars/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_31\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -s C:\Users\liuzw\.m2\settings.xml package"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_31"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0_31\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.6.0_31\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_31\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_31\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_31\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_31\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_31\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_31\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk1.6.0_31\jre\classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="maven.home" value="D:\work\workspace\GitHub\Argo\core\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0.026" classname="com.bj58.argo.ArgoExceptionTest" name="testBoth"/>
+  <testcase time="0" classname="com.bj58.argo.ArgoExceptionTest" name="testCause"/>
+  <testcase time="0" classname="com.bj58.argo.ArgoExceptionTest" name="testContext"/>
+  <testcase time="0" classname="com.bj58.argo.ArgoExceptionTest" name="testMessage"/>
+  <testcase time="0" classname="com.bj58.argo.ArgoFilterTest" name="testInit"/>
+  <testcase time="0.001" classname="com.bj58.argo.learn.ClassTest" name="testAnnotation"/>
+  <testcase time="0.002" classname="com.bj58.argo.learn.ClassTest" name="testField"/>
+  <testcase time="0.004" classname="learn.ExceptionTest" name="test"/>
+  <testcase time="0.002" classname="com.bj58.argo.learn.FileTest" name="testContain"/>
+  <testcase time="0.002" classname="com.bj58.argo.utils.OnlyOnceConditionTest" name="testMore"/>
+  <testcase time="0" classname="com.bj58.argo.utils.OnlyOnceConditionTest" name="testOnlyOnce"/>
+  <testcase time="0.01" classname="com.bj58.argo.route.PathMatcherTest" name="test"/>
+  <testcase time="0.001" classname="com.bj58.argo.route.PathMatcherTest" name="testPathMatch"/>
+  <testcase time="0.002" classname="com.bj58.argo.utils.PathUtilsTest" name="testCombine"/>
+  <testcase time="0.004" classname="com.bj58.argo.utils.PathUtilsTest" name="testContains"/>
+  <testcase time="0.002" classname="com.bj58.argo.utils.PathUtilsTest" name="testConventPath"/>
+  <testcase time="0.001" classname="com.bj58.argo.utils.PathUtilsTest" name="testRelativePath"/>
+  <testcase time="0.004" classname="com.bj58.argo.utils.PathUtilsTest" name="testSimplyPath"/>
+  <testcase time="0" classname="com.bj58.argo.utils.PathUtilsTest" name="testSimplyWithoutPrefix"/>
+</testsuite>
