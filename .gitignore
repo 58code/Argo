@@ -1,0 +1,15 @@
+/core/target
+/samples/company/target
+/samples/hello-world/target
+/*.project
+/core/*
+/core/*.classpath
+/core/*.project
+/samples/company/.settings
+/samples/company/bin
+/samples/company/.classpath
+/samples/company/.project
+/samples/hello-world/.settings
+/samples/hello-world/bin
+/samples/hello-world/.classpath
+/samples/hello-world/.project
