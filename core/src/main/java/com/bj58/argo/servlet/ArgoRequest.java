@@ -10,6 +10,7 @@ import com.bj58.argo.thirdparty.jetty.UrlEncoded;
 import com.google.common.base.Charsets;
 import com.google.common.base.Function;
 import com.google.common.collect.*;
+import com.google.common.collect.ImmutableMap.Builder;
 import com.google.common.io.CharStreams;
 
 import javax.servlet.MultipartConfigElement;
@@ -159,11 +160,14 @@ public class ArgoRequest extends HttpServletRequestWrapper implements Closeable 
             return queryStrings;
 
         MultiMap<String> params = new MultiMap<String>();
-
-        UrlEncoded.decodeTo(super.getQueryString(), params, "UTF-8", maxFormKeys);
-
-        queryStrings = NullToEmptyMap.safeWrapper(params, getSafeParameter());
-
+        String originQueryString = super.getQueryString();
+        
+        if(queryStrings != null){
+        	
+	        UrlEncoded.decodeTo(originQueryString, params, "UTF-8", maxFormKeys);
+	
+	        queryStrings = NullToEmptyMap.safeWrapper(params, getSafeParameter());
+        }
         return queryStrings;
 
     }
@@ -250,11 +254,16 @@ public class ArgoRequest extends HttpServletRequestWrapper implements Closeable 
         UrlEncoded.decodeTo(super.getInputStream(), params, "UTF-8", maxFormContentSize, maxFormKeys);
 
         forms = NullToEmptyMap.safeWrapper(params, getSafeParameter());
-
-        this.params = ImmutableMap.<String, Collection<String>>builder()
-                .putAll(queryStrings)
-                .putAll(forms)
-                .build();
+        
+        Builder<String, Collection<String>> builder =  ImmutableMap.<String, Collection<String>>builder();
+        
+        if(queryStrings != null)
+        	builder.putAll(queryStrings);
+        
+        if(forms != null)
+        	builder.putAll(forms);
+       
+        this.params = builder.build();
 
     }
 
